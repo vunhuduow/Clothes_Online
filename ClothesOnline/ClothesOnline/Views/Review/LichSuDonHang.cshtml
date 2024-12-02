@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ClothesOnline.Models.Entity_Framework.Order>
+@if (Model != null)
+{
+    var i = 1;
+    <h2>Đơn hàng đã mua</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Mã đơn hàng</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@item.Code</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}
